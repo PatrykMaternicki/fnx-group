@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListingController!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/listing.css') }}"/>
+{% endblock %}
+{% block body %}
+    <div class='listingContainer'>
+        <div class='listingWraper'>
+            <h1>Artykuły</h1>
+            <ul>
+                {% for article in articles %}
+                    <li>
+                        <a href="{{ slug ~ article.id }}">{{ article.title }}</a>
+                    </li>
+                {% endfor %}
+            <ul>
+        </div>
+    </div>
+{% endblock %}

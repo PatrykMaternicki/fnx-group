@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/article.css') }}"/>
+{% endblock %}
+{% block body %}
+<main class='article'>
+    {% if logged == 1 %}
+        {% if heOwned == true %}
+            {% include 'partials/article.twig' %}
+        {% else %}
+            {% include 'partials/not_bought.twig' %}
+        {% endif %}
+    {% else %}
+        {% include 'partials/not_access.twig' %}
+    {% endif %}
+</main>
+{% endblock %}

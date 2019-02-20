@@ -1,0 +1,30 @@
+<section>
+    <article class='container'>
+        <header>
+            <h1>{{  article.title  }}</h1>
+        </header>
+        <section class='row'>
+            {% for author in authors %}
+            <p class='col-2'>
+                <a href='{{ slugs.authors ~ author.id }}'>
+                    {{ author.firstName ~ ' ' ~ author.lastName }}
+                </a>
+            </p>
+            {% endfor %}
+            <p class='col-2'><a href='{{ slugs.category }}'>{{  category  }}</a></p>
+        </section>
+        <section>
+            {{  article.shortDescription  }}
+        </section>
+        <section>
+            {{  article.content  }}
+        </section>
+        <footer>
+            {% for tag in tags %}
+                <a href="{{ slugs.tags ~ tag.id }}">
+                    {{ tag.name }}
+                </a>
+            {% endfor %}
+        </footer>
+    </article>
+</section>

@@ -1,0 +1,14 @@
+.loginContainer {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginWraper {
+  width: 25%;
+}
+
+.input,label {
+  width: 100%;
+}

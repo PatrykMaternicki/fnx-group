@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zaloguj się |FNX Group{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/login.css') }}"/>
+{% endblock %}
+{% block body %}
+    <div class='loginContainer'>
+        <div class='loginWraper'>
+            <form action='/user' method='post'>
+            <div class='form-group'>
+                <label for='user'> Login:
+                    <input class="form-control" type='text' id='user' name='login' placeholder='kowalski'/>
+                </label>
+            </div>
+            <div>
+                <label for='password'> Hasło:
+                    <input class="form-control" type='text' id='password' name='password' placeholder='kowalski'/>
+                </label>
+            </div>
+            <input class="btn btn-dark btn-lg" type='submit' value='wyslij' />
+            </form>
+        </div>
+    </div>
+{% endblock %}

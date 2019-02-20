@@ -1,0 +1,10 @@
+.listingContainer {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listingWraper {
+  width: 25%;
+}
